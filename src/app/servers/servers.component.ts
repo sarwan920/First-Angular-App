@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
  ServerStatus="No Server";
  serverName="TestServer";
+ serverCreated=false;
 
  name:string="";
   constructor() {
@@ -32,6 +33,7 @@ export class ServersComponent implements OnInit {
    
 
    onServerCreation(){
+     this.serverCreated=true;
      this.ServerStatus="Server has been Created with name   "+this.serverName;
    }
 
