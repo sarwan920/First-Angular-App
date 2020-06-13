@@ -20,6 +20,17 @@ export class ServersComponent implements OnInit {
      this.number++;
    }
 
+   onDelete(){
+     if(this.number>0)
+     {
+      this.number--;
+     }else
+     {
+       this.number=0;
+     }
+     
+   }
+
   ngOnInit(): void {
   }
 
