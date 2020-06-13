@@ -1,9 +1,13 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer" 
+<button class="btn btn-primary" 
 
 (click)="onServerCreation()">Add Server</button>
 <!-- <p [innerText]="allowNewServer"></p> -->
 
-<p>{{ serverCreation }}</p>
+
+
+<button (click)="onReset()" class="btn btn-warning">Reset</button>
+
+<h1>{{number}}</h1>
 
 <!-- [disabled]="!allowNewServer" -->
 <app-server></app-server>
