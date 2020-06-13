@@ -6,31 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
- number=0
+ ServerStatus="No Server";
+ serverName="";
   constructor() {
    
   
-  
    }
-   onReset(){
-     this.number=0;
+
+   onUpdateServerName(event:Event) {
+     this.serverName=(<HTMLInputElement>event.target).value;
+
    }
+   
 
    onServerCreation(){
-     this.number++;
+     this.ServerStatus=this.serverName;
    }
 
-   onDelete(){
-     if(this.number>0)
-     {
-      this.number--;
-     }else
-     {
-       this.number=0;
-     }
-     
-   }
-
+   
   ngOnInit(): void {
   }
 
