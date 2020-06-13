@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-servers',
   templateUrl: './servers.component.html',
@@ -7,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
  ServerStatus="No Server";
- serverName="";
+ serverName="TestServer";
+
+ name:string="";
   constructor() {
    
   
    }
 
+   
+
+  //  clickReset(){
+  //    this.name="";
+  //  }
+
+   
+   
+ 
    onUpdateServerName(event:Event) {
      this.serverName=(<HTMLInputElement>event.target).value;
 
@@ -20,7 +32,7 @@ export class ServersComponent implements OnInit {
    
 
    onServerCreation(){
-     this.ServerStatus=this.serverName;
+     this.ServerStatus="Server has been Created with name   "+this.serverName;
    }
 
    
