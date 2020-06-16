@@ -17,9 +17,11 @@
 
 
 <!-- [disabled]="!allowNewServer" -->
-<app-server></app-server>
-<app-server></app-server>
+<!-- <app-server></app-server>
+<app-server></app-server> -->
 
+
+<app-server *ngFor="let server of servers" ></app-server>
 <hr>
 <input type="text " class="form-control" [(ngModel)]="name">
 <h3>{{ name }}</h3>
